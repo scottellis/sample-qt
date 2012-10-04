@@ -23,10 +23,9 @@ Then to run the sample-qt app
 
         root@overo:~/sample-qt# ./sample-qt -qws
 
-If you use the jumpnow-qte-image described available in this Yocto
-meta layer [https://github.com/scottellis/meta-jumpnow](meta-jumpnow)
-then the app will be built and installed in /usr/bin in the resulting
-root file system.
+If you use the jumpnow-qte-image available in the [https://github.com/scottellis/meta-jumpnow](meta-jumpnow)
+Yocto meta layer, then the sample-qt app will be built and installed in /usr/bin 
+in the resulting root file system.
 
 The recipe can be found in meta-jumpnow/recipes-qt/qt4/sample-qt/
 
