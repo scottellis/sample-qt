@@ -18,7 +18,7 @@
     <item row="0" column="0">
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>Heartbeat LED</string>
+       <string>Heartbeat Led</string>
       </property>
      </widget>
     </item>
@@ -31,7 +31,7 @@
        </size>
       </property>
       <property name="text">
-       <string>Disable</string>
+       <string>OFF</string>
       </property>
      </widget>
     </item>

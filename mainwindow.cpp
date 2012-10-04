@@ -55,10 +55,13 @@ void MainWindow::onButtonClick()
 
     int len = write(fd, buff, strlen(buff));
 
-    if (len != (int)strlen(buff))
+    if (len != (int)strlen(buff)) {
         qDebug() << "Error: " << strerror(errno);
-    else
+    }
+    else {
         m_ledState = !m_ledState;
+        ui->hbButton->setText(m_ledState ? "OFF" : "ON");
+    }
 
     ::close(fd);
 }
@@ -93,11 +96,11 @@ void MainWindow::initButtonState()
 
     if (strstr(buff, "[none]")) {
         m_ledState = false;
-        ui->hbButton->setText("Enable");
+        ui->hbButton->setText("ON");
     }
     else {
         m_ledState = true;
-        ui->hbButton->setText("Disable");
+        ui->hbButton->setText("OFF");
     }
 
     ::close(fd);
