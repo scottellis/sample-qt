@@ -60,7 +60,7 @@ void MainWindow::onButtonClick()
     }
     else {
         m_ledState = !m_ledState;
-        ui->hbButton->setText(m_ledState ? "OFF" : "ON");
+        ui->hbButton->setText(m_ledState ? "Turn Off" : "Turn On");
     }
 
     ::close(fd);
@@ -96,11 +96,11 @@ void MainWindow::initButtonState()
 
     if (strstr(buff, "[none]")) {
         m_ledState = false;
-        ui->hbButton->setText("ON");
+        ui->hbButton->setText("Turn On");
     }
     else {
         m_ledState = true;
-        ui->hbButton->setText("OFF");
+        ui->hbButton->setText("Turn Off");
     }
 
     ::close(fd);

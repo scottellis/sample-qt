@@ -26,7 +26,7 @@
      <widget class="QPushButton" name="hbButton">
       <property name="maximumSize">
        <size>
-        <width>160</width>
+        <width>240</width>
         <height>36</height>
        </size>
       </property>
