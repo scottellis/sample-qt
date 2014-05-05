@@ -1,21 +1,17 @@
-#-------------------------------------------------
 #
-# Project created by QtCreator 2012-10-03T16:01:23
+# Copyright (c) 2014 Jumpnow Technologies, LLC
 #
-#-------------------------------------------------
 
-QT       += core gui
-
-TARGET = sample-qt
 TEMPLATE = app
 
+TARGET = sample-qt
 
-SOURCES += main.cpp\
-        mainwindow.cpp
+QT += core gui
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+SOURCES += main.cpp mainwindow.cpp
 
 HEADERS  += mainwindow.h
-
-FORMS    += mainwindow.ui
 
 target.path = /usr/bin
 INSTALLS += target

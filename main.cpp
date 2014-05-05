@@ -1,10 +1,9 @@
 /*
- * Copyright 2012, Pansenti, LLC
- *
+ * Copyright (c) 2014 Jumpnow Technologies, LLC
  */
 
-#include <QtGui/QApplication>
 #include "mainwindow.h"
+#include <qapplication.h>
 
 int main(int argc, char *argv[])
 {

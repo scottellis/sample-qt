@@ -1,0 +1,5 @@
+Makefile
+sample-qt
+*.o
+*~
+*.swp

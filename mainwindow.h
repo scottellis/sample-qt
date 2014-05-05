@@ -1,16 +1,14 @@
 /*
- * Copyright 2012, Pansenti, LLC
- *
+ * Copyright (c) 2014, Jumpnow Technologies, LLC
  */
 
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
-
-namespace Ui {
-class MainWindow;
-}
+#include <qmainwindow.h>
+#include <qpushbutton.h>
+#include <qlabel.h>
+#include <qstringlist.h>
 
 class MainWindow : public QMainWindow
 {
@@ -18,18 +16,20 @@ class MainWindow : public QMainWindow
     
 public:
     explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
-    
 
 public slots:
-    void onButtonClick();
+    void onClickColor();
 
 private:
-    void initButtonState();
+    void layoutWindow();
 
-    Ui::MainWindow *ui;
+    QPushButton *m_change;
+    QPushButton *m_exit;
 
-    bool m_ledState;
+    QStringList m_colors;
+    int m_currentColor;
+
+    QLabel *m_label;
 };
 
 #endif // MAINWINDOW_H
