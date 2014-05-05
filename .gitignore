@@ -1,5 +1,6 @@
 Makefile
 sample-qt
+moc*
 *.o
 *~
 *.swp
