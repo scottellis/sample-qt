@@ -34,23 +34,20 @@ void MainWindow::layoutWindow()
     QWidget *centralWidget = new QWidget(this);
     QVBoxLayout *vLayout = new QVBoxLayout(centralWidget);
 
-    QHBoxLayout *hLayout = new QHBoxLayout;
-
     m_change = new QPushButton("Click Me");
-    hLayout->addWidget(m_change);
+    vLayout->addWidget(m_change);
 
-    m_exit = new QPushButton("Exit");
-    hLayout->addWidget(m_exit);
-
-    vLayout->addLayout(hLayout);
-
-    hLayout = new QHBoxLayout;
+    QHBoxLayout *hLayout = new QHBoxLayout;
 
     m_label = new QLabel;
     m_label->setFixedSize(100, 100);
+    hLayout->addStretch();
     hLayout->addWidget(m_label);
-
+    hLayout->addStretch();	
     vLayout->addLayout(hLayout);
+
+    m_exit = new QPushButton("Exit");
+    vLayout->addWidget(m_exit);
 
     setCentralWidget(centralWidget);
 
